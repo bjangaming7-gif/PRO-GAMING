@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRO GAMING</title>
+<style>
+:root{--accent:#00d9ff;--bg:#070b12;--card:#101824;--muted:#9bb0c7}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#102438 0,#070b12 50%);color:#eef7ff;font-family:Arial,Helvetica,sans-serif}
+header{padding:28px 18px;text-align:center;border-bottom:1px solid #193044}
+.logo{font-size:clamp(24px,5vw,40px);font-weight:900;letter-spacing:2px;color:var(--accent);text-shadow:0 0 18px #00d9ff55}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:14px}
+nav a{color:#d8f5ff;text-decoration:none;padding:9px 13px;border:1px solid #24445c;border-radius:20px}
+main{max-width:1050px;margin:auto;padding:20px}
+.hero{padding:35px 18px;text-align:center;border:1px solid #16445c;background:linear-gradient(135deg,#0c1723,#111e30);border-radius:20px}
+.hero h1{font-size:clamp(26px,5vw,48px);margin:0 0 12px}.hero p{color:var(--muted)}
+section{margin:24px 0}.section-title{color:var(--accent);margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid #20374d;border-radius:15px;padding:18px;transition:.2s}
+.card:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 0 20px #00d9ff14}
+.card h3{margin:0 0 8px}.card p{color:var(--muted);line-height:1.5}
+.card a,.btn{color:var(--accent);text-decoration:none}
+.btn{display:inline-block;background:#0b2333;border:1px solid #23617b;border-radius:10px;padding:10px 14px;margin-top:8px;cursor:pointer}
+form{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+label{display:block;font-size:13px;color:#a9c5da;margin-bottom:5px}
+input,select{width:100%;padding:12px;border-radius:9px;background:#080f18;border:1px solid #29445a;color:white}
+.notice{background:#0b1722;border:1px solid #314c61;border-radius:12px;padding:12px;color:#b6c8d9;font-size:13px;line-height:1.5}
+#app{display:none}#login{max-width:680px;margin:24px auto;padding:20px;border-radius:18px;background:#101824;border:1px solid #284359}
+#login h2{color:var(--accent)}.full{grid-column:1/-1}
+footer{text-align:center;padding:28px;color:#8da4ba;border-top:1px solid #203244}
+.profilebar{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 0;color:#b8d5e8}
+.small{font-size:12px;color:#8da4ba}
+@media(max-width:520px){main{padding:12px}.hero{padding:25px 12px}}
+</style>
+</head>
+<body>
+<header><div class="logo">PRO GAMING</div><div class="small">Explore • Learn • Build • Create</div></header>
+
+<div id="login">
+  <h2>Welcome to Tech Hub</h2>
+  <p>Set up your local profile to continue. You can skip personal fields you don't want to share.</p>
+  <div class="notice">Privacy note: This demo keeps your profile in this browser only. It is not a real secure account system and does not send data to a server. Avoid entering sensitive information; school and best-friend fields are optional.</div>
+  <form id="profileForm" style="margin-top:16px">
+    <div><label for="name">Your Name *</label><input id="name" required maxlength="40" autocomplete="nickname"></div>
+    <div><label for="age">Age (optional)</label><input id="age" type="number" min="1" max="120" placeholder="Age"></div>
+    <div><label for="email">Email (optional)</label><input id="email" type="email" placeholder="you@example.com"></div>
+    <div><label for="gender">Gender (optional)</label><select id="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option><option>Other</option></select></div>
+    <div><label for="school">School (optional)</label><input id="school" maxlength="100" placeholder="School name"></div>
+    <div><label for="color">Favorite Color</label><input id="color" type="text" maxlength="24" placeholder="Blue"></div>
+    <div class="full"><label for="friend">Best Friend (optional)</label><input id="friend" maxlength="40" placeholder="Friend's name"></div>
+    <div class="full"><button class="btn" type="submit">Enter Tech Hub</button></div>
+  </form>
+</div>
+
+<div id="app">
+<nav><a href="#coding">Coding</a><a href="#tech">Technology</a><a href="#anime">Anime Zone</a><a href="#contact">Contact</a></nav>
+<main>
+<div class="profilebar"><span id="welcome"></span><button class="btn" id="logout" type="button">Log Out / Reset Profile</button></div>
+<div class="hero"><h1>Build Your Digital Future</h1><p>A beginner-friendly hub for coding, technology, useful tools and entertainment.</p></div>
+
+<section id="coding"><h2 class="section-title">Coding Languages</h2><div class="grid">
+<div class="card"><h3>HTML</h3><p>Build the structure of websites.</p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">Learn HTML ↗</a></div>
+<div class="card"><h3>CSS</h3><p>Style webpages and create responsive layouts.</p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">Learn CSS ↗</a></div>
+<div class="card"><h3>JavaScript</h3><p>Add interactive features to websites.</p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">Learn JavaScript ↗</a></div>
+<div class="card"><h3>Python</h3><p>Explore programming, automation and data basics.</p><a href="https://www.python.org/about/gettingstarted/" target="_blank" rel="noopener">Learn Python ↗</a></div>
+</div></section>
+
+<section id="tech"><h2 class="section-title">Technology Corner</h2><div class="grid">
+<div class="card"><h3>AI & Machine Learning</h3><p>Learn how artificial intelligence works and how to use it responsibly.</p><a href="https://ai.google/learn/" target="_blank" rel="noopener">Explore AI ↗</a></div>
+<div class="card"><h3>Android Development</h3><p>Discover app development and Android tools.</p><a href="https://developer.android.com/" target="_blank" rel="noopener">Android Developers ↗</a></div>
+<div class="card"><h3>Web Development</h3><p>Design and develop modern websites.</p><a href="https://web.dev/learn/" target="_blank" rel="noopener">Web.dev Learn ↗</a></div>
+<div class="card"><h3>Online Safety</h3><p>Learn privacy, account safety and responsible cybersecurity.</p><a href="https://www.cisa.gov/resources-tools" target="_blank" rel="noopener">Safety Resources ↗</a></div>
+</div></section>
+
+<section id="anime"><h2 class="section-title">Anime Zone — Official Platforms</h2><p class="notice">These links open official streaming platforms or official anime channels. Availability, subscriptions and regional catalogs may vary.</p><div class="grid">
+<div class="card"><h3>Crunchyroll</h3><p>Anime streaming service.</p><a href="https://www.crunchyroll.com/" target="_blank" rel="noopener">Visit Crunchyroll ↗</a></div>
+<div class="card"><h3>Netflix Anime</h3><p>Anime titles available on Netflix.</p><a href="https://www.netflix.com/browse/genre/7424" target="_blank" rel="noopener">Browse Anime ↗</a></div>
+<div class="card"><h3>Muse Asia</h3><p>Official anime channel on YouTube.</p><a href="https://www.youtube.com/@MuseAsia" target="_blank" rel="noopener">Open Muse Asia ↗</a></div>
+<div class="card"><h3>Ani-One Asia</h3><p>Official anime channel on YouTube.</p><a href="https://www.youtube.com/@AniOneAsia" target="_blank" rel="noopener">Open Ani-One Asia ↗</a></div>
+</div></section>
+
+<section id="contact"><h2 class="section-title">Contact — PRO GAMING</h2><div class="grid">
+<div class="card"><p><b>Creator / Contact:</b> PRO GAMING</p><p><b>Email 1:</b> <a href="mailto:bjangaming7@gmail.com">bjangaming7@gmail.com</a></p><p><b>Email 2:</b> <a href="mailto:eeavonex@gmail.com">eeavonex@gmail.com</a></p><p><b>Mobile:</b> <a href="tel:01349571600">01349571600</a></p></div>
+<div class="card"><h3>Send a Message</h3><form action="https://formsubmit.co/bjangaming7@gmail.com" method="POST" style="display:grid;grid-template-columns:1fr;gap:12px">
+<input type="hidden" name="_subject" value="New message from PRO GAMING website">
+<input type="hidden" name="_template" value="table">
+<div><label for="msgname">Your Name</label><input id="msgname" name="name" required maxlength="80" placeholder="Enter your name"></div>
+<div><label for="msgemail">Your Email</label><input id="msgemail" name="email" type="email" required placeholder="you@example.com"></div>
+<div><label for="msgsubject">Subject</label><input id="msgsubject" name="subject" maxlength="120" placeholder="Message subject"></div>
+<div><label for="msgbody">Your Message</label><textarea id="msgbody" name="message" required maxlength="3000" rows="5" placeholder="Write your message here..." style="width:100%;padding:12px;border-radius:9px;background:#080f18;border:1px solid #29445a;color:white"></textarea></div>
+<div><button class="btn" type="submit">SEND MESSAGE</button></div>
+</form><p class="small">Please do not send passwords or private/sensitive information.</p></div></div></section>
+</main>
+<footer>© 2026 PRO GAMING • Learn technology responsibly</footer>
+</div>
+<script>
+const form=document.getElementById('profileForm'), login=document.getElementById('login'), app=document.getElementById('app');
+function showProfile(p){login.style.display='none';app.style.display='block';document.getElementById('welcome').textContent='Welcome, '+(p.name||'User')+'!';}
+try{const saved=localStorage.getItem('tac_profile');if(saved){showProfile(JSON.parse(saved));}}catch(e){}
+form.addEventListener('submit',function(e){e.preventDefault();const p={name:document.getElementById('name').value.trim(),color:document.getElementById('color').value.trim()};localStorage.setItem('tac_profile',JSON.stringify(p));showProfile(p);});
+document.getElementById('logout').addEventListener('click',()=>{localStorage.removeItem('tac_profile');app.style.display='none';login.style.display='block';form.reset();});
+</script>
+</body>
+</html>
